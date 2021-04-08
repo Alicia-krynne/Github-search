@@ -7,7 +7,7 @@ import { GithubServiceService } from '../github-service.service';
   styleUrls: ['./github-app.component.scss']
 })
 export class GithubAppComponent implements OnInit {
-  public githubUserQuery:string | undefined; //used quickfix  from exisisting  error 
+  public githubUserQuery:string =""; //used quickfix  from exisisting  error 
   public githubProfile:any;
   public githubRepos: any= [];
 

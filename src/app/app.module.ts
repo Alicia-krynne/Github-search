@@ -9,9 +9,7 @@ import { GithubProfileComponent } from './github-profile/github-profile.componen
 import { GithubProfileCardComponent } from './github-profile-card/github-profile-card.component';
 import { GithubProfileDataComponent } from './github-profile-data/github-profile-data.component';
 import { GithubReposComponent } from './github-repos/github-repos.component';
-import {  Observable } from 'rxjs';
-import {CLIENT_ID ,CLIENT_SECRET } from '../app/credentials/githubCreds';
-import { ElementSchemaRegistry } from '@angular/compiler';
+
 
 
 @NgModule({
@@ -28,7 +26,7 @@ import { ElementSchemaRegistry } from '@angular/compiler';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    Observable
+
   ],
   providers: [],
   bootstrap: [AppComponent]
