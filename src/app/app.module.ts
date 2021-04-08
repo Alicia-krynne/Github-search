@@ -1,18 +1,37 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import{ FormsModule } from  '@angular/forms'
+import { HttpClientModule} from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { GithubAppComponent } from './github-app/github-app.component';
+import { GithubProfileComponent } from './github-profile/github-profile.component';
+import { GithubProfileCardComponent } from './github-profile-card/github-profile-card.component';
+import { GithubProfileDataComponent } from './github-profile-data/github-profile-data.component';
+import { GithubReposComponent } from './github-repos/github-repos.component';
+import {  Observable } from 'rxjs';
+import {CLIENT_ID ,CLIENT_SECRET } from '../app/credentials/githubCreds';
+import { ElementSchemaRegistry } from '@angular/compiler';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    GithubAppComponent,
+    GithubProfileComponent,
+    GithubProfileCardComponent,
+    GithubProfileDataComponent,
+    GithubReposComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
+    Observable
   ],
   providers: [],
   bootstrap: [AppComponent]
+  
 })
 export class AppModule { }
