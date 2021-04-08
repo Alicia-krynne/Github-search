@@ -14,8 +14,8 @@ export class GithubServiceService {
  
   public getProfile(searchQuery:any):Observable<any>{
 
-    let dataURL = `https://api.github.com/users/${searchQuery}?access_token=${environment.apiKey}`;
-   // let dataURL = `https://api.github.com/users/${searchQuery}`;//
+    //let dataURL = `https://api.github.com/users/${searchQuery}?access_token=${environment.apiKey}`;//
+    let dataURL = `https://api.github.com/users/${searchQuery}`;
     return this.httpClient.get<any>(dataURL)
   
   }
@@ -23,8 +23,8 @@ export class GithubServiceService {
   // get  repos
   public getRepos(searchQuery:any):Observable<any>{
 
-    let dataURL = `https://api.github.com/users/${searchQuery}/repos?access_token=${environment.apiKey}`;
-    //let dataURL = `https://api.github.com/users/${searchQuery}/repos`;//
+   // let dataURL = `https://api.github.com/users/${searchQuery}/repos?access_token=${environment.apiKey}`;//
+    let dataURL = `https://api.github.com/users/${searchQuery}/repos`;
     return this.httpClient.get<any> (dataURL)
      
   }
